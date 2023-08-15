@@ -1,6 +1,6 @@
 import React, { FC } from "react";
 import { Container } from "./HomePageView.style";
-import { BigImage, MiniArticleWithImage } from "@/components";
+import { BigImage, MiniArticleWithImage, ProfileArticle } from "@/components";
 import { SecondaryTitle } from "@/ui/display/SecondaryTitle/SecondaryTitle.component";
 import { RenderArticles } from "../components";
 
@@ -50,6 +50,17 @@ export const HomePageView: FC = () => {
           imageSrc='https://images.unsplash.com/photo-1632061253472-9c715a570b6c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHw1fHx8ZW58MHx8fHx8&auto=format&fit=crop&w=800&q=60'
         />
       </RenderArticles>
+      <ProfileArticle
+        url='https://www.youtube.com/watch?v=bbUGVFEO9Yc'
+        buttonText='SEE VIDEO'
+        title='Get Inspired'
+        underTitle='Wes Kremer'
+        imageSrc='/images/wes.png'
+        text='A truly inspirational way of living.
+        And not for likes an social media but for the true love of living.
+        Check it out at vice. 
+        '
+      />
     </Container>
   );
 };

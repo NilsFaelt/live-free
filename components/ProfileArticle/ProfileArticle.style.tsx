@@ -7,7 +7,7 @@ export const Container = styled.div`
   justify-content: center;
   align-items: center;
   gap: 0.5rem;
-  width: 80%;
+  width: 100%;
 `;
 export const TitleWrapper = styled.div`
   display: flex;
@@ -17,6 +17,7 @@ export const TitleWrapper = styled.div`
   gap: 0rem;
 `;
 export const Title = styled.h2`
+  white-space: nowrap;
   font-size: 3rem;
   margin: 0rem;
 `;
@@ -34,6 +35,7 @@ export const Text = styled.p`
   text-align: center;
   max-width: 30rem;
   margin-bottom: 0;
+  width: 80%;
 `;
 export const EndText = styled.p`
   text-align: center;

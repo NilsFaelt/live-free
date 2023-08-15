@@ -6,7 +6,9 @@ export const Container = styled.div`
   flex-direction: column;
   gap: 5rem;
   align-items: center;
+  justify-content: center;
   color: black;
+  margin-bottom: 20rem;
   @media (max-width: ${mediaQueries.mobile}) {
     gap: 2rem;
   }

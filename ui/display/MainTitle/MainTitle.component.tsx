@@ -5,7 +5,7 @@ export const MainTitle: FC = () => {
   return (
     <Container>
       <Title>LIVE FREE</Title>
-      <UnderTitle>Sanjahari Corp</UnderTitle>
+      <UnderTitle>Freedom has no price</UnderTitle>
     </Container>
   );
 };

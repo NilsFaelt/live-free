@@ -1,16 +1,15 @@
-"use client";
 import React, { FC } from "react";
 import {
   Container,
   EndText,
   Image,
-  StyledLink,
   Text,
   Title,
   TitleWrapper,
   UnderTitle,
 } from "./ProfileArticle.style";
 import { Bebas_Neue, Rajdhani } from "next/font/google";
+import { PrimaryButton } from "@/ui/actions";
 
 const roboto = Bebas_Neue({ subsets: ["latin"], weight: ["400"] });
 const rajdhani = Rajdhani({ subsets: ["latin"], weight: ["400"] });
@@ -22,6 +21,8 @@ interface Props {
   link?: string;
   endText?: string;
   underTitle?: string;
+  buttonText?: string;
+  url: string;
 }
 
 export const ProfileArticle: FC<Props> = ({
@@ -31,18 +32,24 @@ export const ProfileArticle: FC<Props> = ({
   link,
   endText,
   underTitle,
+  buttonText,
+  url,
 }) => {
+  const handleClick = (url: string) => {
+    window.open(url, "_blank");
+  };
   return (
-    <StyledLink href={link ? link : ""}>
-      <Container>
-        <TitleWrapper>
-          <Title className={roboto.className}>{title}</Title>
-          <UnderTitle className={rajdhani.className}>{underTitle}</UnderTitle>
-        </TitleWrapper>
-        <Image src={imageSrc} />
-        <Text className={rajdhani.className}>{text}</Text>
-        <EndText>{endText}</EndText>
-      </Container>
-    </StyledLink>
+    <Container>
+      <TitleWrapper>
+        <Title className={roboto.className}>{title}</Title>
+        <UnderTitle className={rajdhani.className}>{underTitle}</UnderTitle>
+      </TitleWrapper>
+      <Image src={imageSrc} />
+      <Text className={rajdhani.className}>{text}</Text>
+      <EndText>{endText}</EndText>
+      {buttonText && (
+        <PrimaryButton text={buttonText} onClick={() => handleClick(url)} />
+      )}
+    </Container>
   );
 };

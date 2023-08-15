@@ -1,1 +1,3 @@
-meta
+add footer 
+setup api 
+readmore page
