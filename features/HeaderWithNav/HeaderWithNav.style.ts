@@ -2,6 +2,7 @@ import styled, { keyframes } from "styled-components";
 import Image from "next/image";
 import Link from "next/link";
 import { theme } from "@/styles";
+import { mediaQueries } from "@/styles/mediaQueries";
 
 interface LinksContainerProps {
   $menuanimationstate: "open" | "close" | "stale";
@@ -67,8 +68,7 @@ export const LinksContainer = styled.nav<LinksContainerProps>`
   align-items: center;
   gap: 3rem;
   background-color: transparent;
-
-  @media (max-width: 768px) {
+  @media (max-width: ${mediaQueries.tablet}) {
     background-color: rgba(0, 0, 0, 0.5);
     width: 100vw;
     height: 100vh;

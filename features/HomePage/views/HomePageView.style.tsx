@@ -1,3 +1,4 @@
+import { mediaQueries } from "@/styles/mediaQueries";
 import { styled } from "styled-components";
 
 export const Container = styled.div`
@@ -6,4 +7,7 @@ export const Container = styled.div`
   gap: 5rem;
   align-items: center;
   color: black;
+  @media (max-width: ${mediaQueries.mobile}) {
+    gap: 2rem;
+  }
 `;
