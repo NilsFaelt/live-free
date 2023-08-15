@@ -95,6 +95,12 @@ export const LinksContainer = styled.nav<LinksContainerProps>`
     overflow: hidden;
   }
 `;
+export const BurgerAndLoginBtnWrapper = styled.div`
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 1rem;
+`;
 
 export const LogoImage = styled(Image)`
   width: 5rem;
@@ -108,7 +114,7 @@ export const StyledLink = styled(Link)`
   color: ${theme.colors.primary};
   border-bottom: 0.05rem solid ${theme.colors.secondary};
   &:hover {
-    color: white;
+    color: ${theme.colors.secondary};
     border-bottom: 0.05rem solid white;
   }
 `;

@@ -1,4 +1,5 @@
 import { theme } from "@/styles";
+import Link from "next/link";
 import { styled } from "styled-components";
 
 export const Container = styled.div`
@@ -22,4 +23,7 @@ export const UnderTitle = styled.p`
   color: ${theme.colors.primary};
   font-size: 0.7rem;
   margin-top: -0.3rem;
+`;
+export const StyledLink = styled(Link)`
+  text-decoration: none;
 `;

@@ -3,12 +3,12 @@ import { Dispatch, FC, SetStateAction, useState } from "react";
 import {
   Container,
   LinksContainer,
-  LogoImage,
+  BurgerAndLoginBtnWrapper,
   StyledLink,
-  StyledLinkLogo,
 } from "./HeaderWithNav.style";
 import { BarOne, BarThree, BarTwo, BarWrapper } from "./BurgerMenu.style";
 import { MainTitle } from "@/ui";
+import { UserLoginButton } from "@/ui/actions";
 
 interface Props {}
 interface BurgerMenuProps {
@@ -43,7 +43,10 @@ export const HeaderWithNav: FC<Props> = () => {
           );
         })}
       </LinksContainer>
-      <BurgerMenu setToogleMenu={setToogleMenu} toogleMenu={toogleMenu} />
+      <BurgerAndLoginBtnWrapper>
+        <UserLoginButton />
+        <BurgerMenu setToogleMenu={setToogleMenu} toogleMenu={toogleMenu} />
+      </BurgerAndLoginBtnWrapper>
     </Container>
   );
 };
