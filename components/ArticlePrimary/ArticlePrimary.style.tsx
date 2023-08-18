@@ -13,8 +13,8 @@ export const Container = styled.div`
   width: 18rem;
   height: 25rem;
   @media (max-width: ${mediaQueries.mobile}) {
-    width: 10rem;
-    height: 15rem;
+    width: 23rem;
+    height: 18rem;
   }
 `;
 export const InnerUpperContainer = styled.div<{ imageurl: string }>`

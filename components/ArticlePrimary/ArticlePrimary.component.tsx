@@ -36,6 +36,9 @@ export const ArticlePrimary: FC<Props> = ({
   endTextDate,
   endText,
 }) => {
+  const truncateTitle = (title: string, length: number): string => {
+    return title.length > length ? title.substr(0, length) + "..." : title;
+  };
   return (
     <StyledLink href={link ? link : ""}>
       <Container>
@@ -44,8 +47,8 @@ export const ArticlePrimary: FC<Props> = ({
           <CategoryContainer bgcolor={travelCategoryColorMap.get(category)}>
             <Text>{category}</Text>
           </CategoryContainer>
-          <Title>{title}</Title>
-          <Text>{text}</Text>
+          <Title>{truncateTitle(title, 45)}</Title>
+          <Text>{truncateTitle(text, 55)}</Text>
           <>
             <EndText>
               {endTextDate}
