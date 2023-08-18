@@ -24,6 +24,11 @@ export const UnderTitle = styled.p`
   font-size: 0.7rem;
   margin-top: -0.3rem;
 `;
+export const LoggedInNameText = styled.p`
+  color: ${theme.colors.secondary};
+  font-size: 0.7rem;
+  margin-top: -0.8rem;
+`;
 export const StyledLink = styled(Link)`
   text-decoration: none;
 `;

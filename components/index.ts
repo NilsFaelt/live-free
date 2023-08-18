@@ -1,3 +1,4 @@
 export * from "./BigImage";
-export * from "./MiniArticleWithImage";
 export * from "./ProfileArticle";
+export * from "./ArticlePrimary";
+export * from "./RenderArticles";

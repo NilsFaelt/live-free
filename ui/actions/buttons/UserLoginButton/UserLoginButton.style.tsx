@@ -18,3 +18,6 @@ export const Container = styled.div`
 export const Text = styled.p`
   margin: 0.2rem;
 `;
+export const A = styled.a`
+  text-decoration: none;
+`;

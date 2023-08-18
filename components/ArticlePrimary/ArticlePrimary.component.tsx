@@ -10,7 +10,7 @@ import {
   Title,
   EndText,
   StyledLink,
-} from "./MiniArticleWithImage.style";
+} from "./ArticlePrimary.style";
 
 const roboto = Bebas_Neue({ subsets: ["latin"], weight: ["400"] });
 const rajdhani = Rajdhani({ subsets: ["latin"], weight: ["400"] });
@@ -26,7 +26,7 @@ interface Props {
   endTextDate?: string;
 }
 
-export const MiniArticleWithImage: FC<Props> = ({
+export const ArticlePrimary: FC<Props> = ({
   title,
   imageSrc,
   categoryText,

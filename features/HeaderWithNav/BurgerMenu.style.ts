@@ -1,3 +1,4 @@
+import { theme } from "@/styles";
 import styled from "styled-components";
 
 export const BarWrapper = styled.div`
@@ -14,7 +15,7 @@ export const BarWrapper = styled.div`
 `;
 
 const BaseBar = styled.div`
-  background-color: black;
+  background-color: ${theme.colors.primary};
   height: 0.3rem;
   width: 100%;
   border-radius: 1rem;
