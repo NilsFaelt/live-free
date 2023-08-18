@@ -12,6 +12,8 @@ import {
   StyledLink,
 } from "./ArticlePrimary.style";
 
+import { TravelCategoryType, travelCategoryColorMap } from "@/styles";
+
 const roboto = Bebas_Neue({ subsets: ["latin"], weight: ["400"] });
 const rajdhani = Rajdhani({ subsets: ["latin"], weight: ["400"] });
 
@@ -19,8 +21,7 @@ interface Props {
   title: string;
   imageSrc: string;
   text: string;
-  categoryText: string;
-  categoryColor?: string;
+  category: TravelCategoryType;
   link?: string;
   endText?: string;
   endTextDate?: string;
@@ -29,8 +30,7 @@ interface Props {
 export const ArticlePrimary: FC<Props> = ({
   title,
   imageSrc,
-  categoryText,
-  categoryColor,
+  category,
   text,
   link,
   endTextDate,
@@ -41,8 +41,8 @@ export const ArticlePrimary: FC<Props> = ({
       <Container>
         <InnerUpperContainer imageurl={imageSrc}></InnerUpperContainer>
         <InnerLowerContainer>
-          <CategoryContainer bgcolor={categoryColor ? categoryColor : "teal"}>
-            <Text>{categoryText}</Text>
+          <CategoryContainer bgcolor={travelCategoryColorMap.get(category)}>
+            <Text>{category}</Text>
           </CategoryContainer>
           <Title>{title}</Title>
           <Text>{text}</Text>

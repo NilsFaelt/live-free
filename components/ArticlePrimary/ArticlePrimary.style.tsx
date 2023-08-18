@@ -48,7 +48,7 @@ export const InnerLowerContainer = styled.div`
     gap: 0.5rem;
   }
 `;
-export const CategoryContainer = styled.div<{ bgcolor: string }>`
+export const CategoryContainer = styled.div<{ bgcolor: any }>`
   display: flex;
   justify-content: center;
   align-items: center;
