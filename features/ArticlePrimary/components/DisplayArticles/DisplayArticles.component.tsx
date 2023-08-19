@@ -7,7 +7,6 @@ export const DisplayArticles: FC = () => {
   const { data, isError, isLoading } = useArticles({
     endpoint: "article-primary",
   });
-  console.log(data?.articles);
   if (!data && isError) return null;
   return (
     <Container>
@@ -20,8 +19,9 @@ export const DisplayArticles: FC = () => {
               title={each.title}
               text={each.text}
               category={each.category}
-              endText={each.createdAt}
+              endTextDate={each.createdAt}
               imageSrc={each.image}
+              author={each.author.userName}
             />
           );
         })}

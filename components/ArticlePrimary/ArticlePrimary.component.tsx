@@ -19,11 +19,11 @@ const rajdhani = Rajdhani({ subsets: ["latin"], weight: ["400"] });
 
 interface Props {
   title: string;
+  author: string;
   imageSrc: string;
   text: string;
   category: TravelCategoryType;
   link?: string;
-  endText?: string;
   endTextDate?: string;
 }
 
@@ -34,7 +34,7 @@ export const ArticlePrimary: FC<Props> = ({
   text,
   link,
   endTextDate,
-  endText,
+  author,
 }) => {
   const truncateTitle = (title: string, length: number): string => {
     return title.length > length ? title.substr(0, length) + "..." : title;
@@ -51,8 +51,9 @@ export const ArticlePrimary: FC<Props> = ({
           <Text>{truncateTitle(text, 55)}</Text>
           <>
             <EndText>
+              Published by: {author}
+              <br />
               {endTextDate}
-              <br /> {endText}
             </EndText>
           </>
         </InnerLowerContainer>

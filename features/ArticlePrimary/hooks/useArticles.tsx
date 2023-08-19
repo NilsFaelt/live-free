@@ -1,22 +1,11 @@
 import { apiClient } from "@/api";
-import { TravelCategoryType } from "@/styles";
-import { useQuery } from "@tanstack/react-query";
 
-interface Response {
-  articles: {
-    authorId: string;
-    content: string;
-    createdAt: string;
-    category: TravelCategoryType;
-    id: string;
-    image: string;
-    text: string;
-    title: string;
-  }[];
-}
+import { useQuery } from "@tanstack/react-query";
+import { ArticlePrimaryType } from "..";
+
 const fetchArticles = async (params: {
   endpoint: string;
-}): Promise<Response> => {
+}): Promise<ArticlePrimaryType> => {
   const data = await apiClient(`${params.endpoint}`);
   return data;
 };
