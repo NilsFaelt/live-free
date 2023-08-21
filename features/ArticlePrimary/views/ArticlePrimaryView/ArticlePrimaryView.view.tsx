@@ -1,6 +1,6 @@
 import React, { FC } from "react";
 import { Container } from "./ArticlePrimary.style";
-import { DisplayArticle, DisplayArticles } from "../components";
+import { DisplayArticle, DisplayArticles } from "../../components";
 
 interface Props {
   id?: string;

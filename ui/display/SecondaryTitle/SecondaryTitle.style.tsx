@@ -13,11 +13,11 @@ export const Container = styled.div`
 `;
 export const Title = styled.h1`
   color: ${theme.colors.primary};
-  font-size: 3.5rem;
+  font-size: 2.5rem;
   margin: 0;
 `;
 export const UnderTitle = styled.p`
   color: ${theme.colors.secondary};
   font-size: 1rem;
-  margin-top: 0.4rem;
+  margin-top: 0rem;
 `;

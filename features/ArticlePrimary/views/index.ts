@@ -1,1 +1,2 @@
-export { ArticlePrimaryView } from "./ArticlePrimaryView.view";
+export { ArticlePrimaryView } from "./ArticlePrimaryView/ArticlePrimaryView.view";
+export { ArticlePrimaryAddView } from "./ArticlePrimaryAddView";
