@@ -1,5 +1,5 @@
-import React, { ChangeEvent, FC, useState } from "react";
-import { MainDropDown, MainInput } from "@/ui";
+import React, { FC, useState } from "react";
+import { MainDropDown, MainInput, PrimaryButton, TextArea } from "@/ui";
 import {
   Container,
   FullArticleWrapper,
@@ -9,7 +9,6 @@ import {
 } from "./AddArticle.style";
 import { ArticlePrimaryBaseType } from "@/types";
 import { ArticlePrimary } from "@/components";
-import { travelCategoryColorMap } from "@/styles";
 import { travelCategories } from "./travelCategories";
 
 export const AddArticle: FC = () => {
@@ -31,7 +30,6 @@ export const AddArticle: FC = () => {
   };
   return (
     <Container>
-      <Title>Preview Teaser</Title>
       <TeaserAndInputWrapper>
         <InputWrapper>
           <MainInput
@@ -70,9 +68,13 @@ export const AddArticle: FC = () => {
           category={category}
         />
       </TeaserAndInputWrapper>
-      <FullArticleWrapper>
-        <Title>Preview Full Ariticle</Title>
-      </FullArticleWrapper>
+      <Title>Add ariticle content-text</Title>
+      <TextArea
+        placeholder='Content'
+        setValue={(value: any) => handleChange("text", value)}
+      />
+      <FullArticleWrapper></FullArticleWrapper>
+      <PrimaryButton text='ADD ARTICLE' />
     </Container>
   );
 };

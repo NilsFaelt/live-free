@@ -2,9 +2,13 @@ import { apiClient } from "@/api";
 import { useQuery } from "@tanstack/react-query";
 import { ArticlePrimaryType } from "..";
 
+interface Articles {
+  articles: ArticlePrimaryType[];
+}
+
 const fetchArticles = async (params: {
   endpoint: string;
-}): Promise<ArticlePrimaryType> => {
+}): Promise<Articles> => {
   const data = await apiClient(`${params.endpoint}`);
   return data;
 };

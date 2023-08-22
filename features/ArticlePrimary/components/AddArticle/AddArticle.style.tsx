@@ -9,6 +9,7 @@ export const Container = styled.div`
   justify-content: center;
   gap: 2rem;
   margin-bottom: 15rem;
+  padding: 5rem;
 `;
 export const TeaserAndInputWrapper = styled.div`
   display: flex;

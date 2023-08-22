@@ -2,7 +2,6 @@ import React, { FC } from "react";
 import { Container } from "./ArticlePrimaryAddView.style";
 import { SecondaryTitle } from "@/ui/display/SecondaryTitle/SecondaryTitle.component";
 import { AddArticle } from "../../components";
-import { ArticlePrimary } from "@/components";
 
 interface Props {
   id?: string;
