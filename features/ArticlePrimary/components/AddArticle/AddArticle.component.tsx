@@ -1,6 +1,12 @@
 import React, { ChangeEvent, FC, useState } from "react";
 import { MainDropDown, MainInput } from "@/ui";
-import { Container, InputWrapper, Title } from "./AddArticle.style";
+import {
+  Container,
+  FullArticleWrapper,
+  InputWrapper,
+  TeaserAndInputWrapper,
+  Title,
+} from "./AddArticle.style";
 import { ArticlePrimaryBaseType } from "@/types";
 import { ArticlePrimary } from "@/components";
 import { travelCategoryColorMap } from "@/styles";
@@ -25,43 +31,48 @@ export const AddArticle: FC = () => {
   };
   return (
     <Container>
-      <InputWrapper>
-        <MainInput
-          setValue={(value: any) => handleChange("title", value)}
-          name='title'
-          value={article.title}
-          type='text'
-          placeholder='Title text'
-        />
-        <MainInput
-          setValue={(value: any) => handleChange("text", value)}
-          name='text'
-          value={article.text}
-          type='text'
-          placeholder='Teaser Text'
-        />
-        <MainInput
-          setValue={(value: any) => handleChange("image", value)}
-          name='image'
-          value={article.image}
-          type='text'
-          placeholder='Image link'
-        />
-        <MainDropDown
-          setSelectedValue={(value: string | number) =>
-            handleChange("category", value)
-          }
-          values={travelCategories}
-        />
-      </InputWrapper>
       <Title>Preview Teaser</Title>
-      <ArticlePrimary
-        title={title}
-        text={text}
-        imageSrc={image}
-        author='TEST'
-        category={category}
-      />
+      <TeaserAndInputWrapper>
+        <InputWrapper>
+          <MainInput
+            setValue={(value: any) => handleChange("title", value)}
+            name='title'
+            value={article.title}
+            type='text'
+            placeholder='Title text'
+          />
+          <MainInput
+            setValue={(value: any) => handleChange("text", value)}
+            name='text'
+            value={article.text}
+            type='text'
+            placeholder='Teaser Text'
+          />
+          <MainInput
+            setValue={(value: any) => handleChange("image", value)}
+            name='image'
+            value={article.image}
+            type='text'
+            placeholder='Image link'
+          />
+          <MainDropDown
+            setSelectedValue={(value: string | number) =>
+              handleChange("category", value)
+            }
+            values={travelCategories}
+          />
+        </InputWrapper>
+        <ArticlePrimary
+          title={title}
+          text={text}
+          imageSrc={image}
+          author='TEST'
+          category={category}
+        />
+      </TeaserAndInputWrapper>
+      <FullArticleWrapper>
+        <Title>Preview Full Ariticle</Title>
+      </FullArticleWrapper>
     </Container>
   );
 };
