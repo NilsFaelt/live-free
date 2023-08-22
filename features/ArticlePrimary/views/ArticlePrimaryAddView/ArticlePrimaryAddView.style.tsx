@@ -10,9 +10,7 @@ export const Container = styled.div<{
   align-items: center;
   justify-content: center;
   color: black;
-
   margin-top: ${(props) => props.$margintop};
   @media (max-width: ${mediaQueries.mobile}) {
-    gap: 2rem;
   }
 `;

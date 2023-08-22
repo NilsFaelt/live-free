@@ -5,7 +5,7 @@ import { MainLayout } from "@/layout";
 export default function Home({ params }: { params: { id: string } }) {
   return (
     <MainLayout>
-      <ArticlePrimaryAddView />
+      <ArticlePrimaryAddView marginTop='10rem' />
     </MainLayout>
   );
 }

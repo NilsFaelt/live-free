@@ -14,7 +14,7 @@ export const Container = styled.div`
   height: 25rem;
   @media (max-width: ${mediaQueries.mobile}) {
     width: 23rem;
-    height: 18rem;
+    height: 25rem;
   }
 `;
 export const InnerUpperContainer = styled.div<{ imageurl: string }>`
@@ -44,7 +44,7 @@ export const InnerLowerContainer = styled.div`
   border-radius: 0rem 0rem 1rem 1rem;
   box-shadow: 0.5rem, 0.5rem, 0.5rem black;
   @media (max-width: ${mediaQueries.mobile}) {
-    padding: 0.7rem;
+    padding: 1.7rem;
     gap: 0.5rem;
   }
 `;
@@ -69,11 +69,15 @@ export const Title = styled.h2`
   margin: 0rem;
   @media (max-width: ${mediaQueries.mobile}) {
     font-size: 1rem;
+    width: 70%;
   }
 `;
 export const UnderTitle = styled.h3`
   margin: 0rem;
   margin-top: -0.5rem;
+  @media (max-width: ${mediaQueries.mobile}) {
+    width: 70%;
+  }
 `;
 
 export const StyledLink = styled(Link)`

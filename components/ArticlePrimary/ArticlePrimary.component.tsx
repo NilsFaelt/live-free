@@ -37,7 +37,7 @@ export const ArticlePrimary: FC<Props> = ({
   author,
 }) => {
   const truncateTitle = (title: string, length: number): string => {
-    return title.length > length ? title.substr(0, length) + "..." : title;
+    return title?.length > length ? title?.substr(0, length) + "..." : title;
   };
   return (
     <StyledLink href={link ? link : ""}>
