@@ -10,29 +10,45 @@ import {
 import { ArticlePrimaryBaseType } from "@/types";
 import { ArticlePrimary } from "@/components";
 import { travelCategories } from "./travelCategories";
+import { useCreateArticleMutation } from "../../hooks";
+import { useRouter } from "next/navigation";
 
 export const AddArticle: FC = () => {
+  const router = useRouter();
   const [article, setArticle] = useState<ArticlePrimaryBaseType>({
     title: "",
     text: "",
     content: "",
     category: "allaround",
     image: "",
-    authorId: "",
+    authorId: "78667ab1-f44b-4d19-b01b-ca22f4e40d66",
   });
-  const { title, text, content, image, category } = article;
-  console.log(article);
+  const { title, text, image, category } = article;
+
   const handleChange = (fieldName: string, value: string | number) => {
     setArticle({
       ...article,
       [fieldName]: value,
     });
   };
+  const { mutateAsync } = useCreateArticleMutation(article);
+  const handleClick = async () => {
+    mutateAsync().then(() => {
+      router.push("/");
+    });
+  };
+
   return (
-    <Container>
+    <Container
+      onSubmit={(e) => {
+        e.preventDefault();
+        handleClick();
+      }}
+    >
       <TeaserAndInputWrapper>
         <InputWrapper>
           <MainInput
+            required={true}
             setValue={(value: any) => handleChange("title", value)}
             name='title'
             value={article.title}
@@ -47,6 +63,7 @@ export const AddArticle: FC = () => {
             placeholder='Teaser Text'
           />
           <MainInput
+            required={true}
             setValue={(value: any) => handleChange("image", value)}
             name='image'
             value={article.image}
@@ -70,8 +87,9 @@ export const AddArticle: FC = () => {
       </TeaserAndInputWrapper>
       <Title>Add ariticle content-text</Title>
       <TextArea
+        required={true}
         placeholder='Content'
-        setValue={(value: any) => handleChange("text", value)}
+        setValue={(value: any) => handleChange("content", value)}
       />
       <FullArticleWrapper></FullArticleWrapper>
       <PrimaryButton text='ADD ARTICLE' />

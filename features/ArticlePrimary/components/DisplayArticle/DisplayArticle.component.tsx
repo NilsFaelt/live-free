@@ -2,7 +2,7 @@ import React, { FC } from "react";
 import {
   Container,
   EndText,
-  Image,
+  StyledImage,
   Title,
   UnderTitle,
 } from "./DisplayArticle.style";
@@ -24,12 +24,12 @@ export const DisplayArticle: FC<Props> = ({ id }) => {
         underTitle='We are really sorry for the inconvenience'
       />
     );
-  const { title, createdAt } = data;
+  const { title, createdAt, image } = data;
   console.log(data);
   return (
     <Container>
       <Title>{data.title}</Title>
-      <Image />
+      <StyledImage src={image} />
       <UnderTitle>{data.text}</UnderTitle>
       <MainText>{data.content}</MainText>
       <EndText>

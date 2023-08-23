@@ -14,10 +14,9 @@ export const Container = styled.div`
     width: 100%;
   }
 `;
-export const Image = styled.image`
-  background-image: url("https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8dHJhdmVsfGVufDB8fDB8fHww&auto=format&fit=crop&w=800&q=60");
-  background-size: cover;
-  background-position: center;
+export const StyledImage = styled.img`
+  object-fit: cover;
+  object-position: center;
   width: 100%;
   height: 30rem;
 `;

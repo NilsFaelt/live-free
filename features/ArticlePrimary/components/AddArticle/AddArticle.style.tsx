@@ -1,7 +1,7 @@
 import { theme } from "@/styles";
 import { styled } from "styled-components";
 
-export const Container = styled.div`
+export const Container = styled.form`
   margin-top: -5rem;
   display: flex;
   flex-direction: column;

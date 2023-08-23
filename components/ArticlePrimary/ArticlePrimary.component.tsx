@@ -42,9 +42,9 @@ export const ArticlePrimary: FC<Props> = ({
   return (
     <StyledLink href={link ? link : ""}>
       <Container>
-        <InnerUpperContainer imageurl={imageSrc}></InnerUpperContainer>
+        <InnerUpperContainer $imageurl={imageSrc}></InnerUpperContainer>
         <InnerLowerContainer>
-          <CategoryContainer bgcolor={travelCategoryColorMap.get(category)}>
+          <CategoryContainer $bgcolor={travelCategoryColorMap.get(category)}>
             <Text>{category}</Text>
           </CategoryContainer>
           <Title>{truncateTitle(title, 45)}</Title>

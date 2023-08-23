@@ -45,9 +45,3 @@ export const MainInput: FC<Props> = ({
     />
   );
 };
-
-MainInput.defaultProps = {
-  type: "text",
-  required: false,
-  placeholder: "",
-};
