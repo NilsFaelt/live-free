@@ -1,7 +1,7 @@
 import React, { FC, ReactNode } from "react";
 import { Container, TitleWrapper } from "./NoMenuLayout.style";
-import { HeaderWithNav } from "@/features";
 import { MainTitle } from "@/ui";
+import { Footer } from "@/components";
 
 interface Props {
   children: ReactNode;
@@ -14,6 +14,7 @@ export const NoMenuLayout: FC<Props> = ({ children }) => {
         <MainTitle />
       </TitleWrapper>
       {children}
+      <Footer />
     </Container>
   );
 };

@@ -21,7 +21,7 @@ export const HeaderWithNav: FC<Props> = () => {
   const Links: { text: string; href: string }[] = [
     { text: "Home", href: "/" },
     { text: "About", href: "/about" },
-    { text: "Contact", href: "/" },
+    { text: "Contact", href: "/contact" },
   ];
   return (
     <Container>

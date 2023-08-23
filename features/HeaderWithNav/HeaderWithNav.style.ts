@@ -56,7 +56,7 @@ export const Container = styled.header`
   @media (max-width: 768px) {
   }
   @media (max-width: 576px) {
-    padding-left: 2rem;
+    padding-left: 0.5rem;
     padding-right: 2rem;
   }
 `;

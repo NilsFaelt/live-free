@@ -6,6 +6,14 @@ import { AddButton } from "@/ui/actions";
 import { SecondaryTitle } from "@/ui/display/SecondaryTitle/SecondaryTitle.component";
 
 export const DisplayArticles: FC = () => {
+  async function fetchToken() {
+    const res = await fetch("/api/access-token");
+    const data = await res.json();
+    console.log("Received token:", data.token);
+  }
+
+  // Call this function somewhere in your component
+  fetchToken();
   const { data, isError, isLoading } = useArticles({
     endpoint: "article-primary",
   });
