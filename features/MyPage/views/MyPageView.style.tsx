@@ -3,19 +3,14 @@ import { styled } from "styled-components";
 
 export const Container = styled.div`
   display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
+  flex-direction: column;
+  gap: 5rem;
   align-items: center;
   justify-content: center;
-  gap: 2rem;
-  width: 90%;
-  margin-bottom: 2rem;
-
-  @media (max-width: ${mediaQueries.tablet}) {
-    width: 100%;
-  }
+  color: black;
+  padding-top: 10rem;
+  margin-bottom: 20rem;
   @media (max-width: ${mediaQueries.mobile}) {
-    width: 100%;
-    gap: 1rem;
+    gap: 2rem;
   }
 `;

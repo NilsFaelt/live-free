@@ -1,15 +1,14 @@
 import { theme } from "@/styles";
 import { styled } from "styled-components";
 
-export const Container = styled.div`
+export const Container = styled.div<{ $backgroundcolor: "teal" | "none" }>`
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 0.5rem;
-  padding-left: 1rem;
-  padding-right: 1rem;
   padding-top: 0.8rem;
-  border-radius: 1rem;
+  box-sizing: content-box;
+  // background-color: ${(props) => props.$backgroundcolor};
+  width: 100%;
 `;
 export const Title = styled.h1`
   color: ${theme.colors.primary};

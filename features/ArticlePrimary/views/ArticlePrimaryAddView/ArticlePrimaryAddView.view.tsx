@@ -14,7 +14,11 @@ export const ArticlePrimaryAddView: FC<Props> = ({
 }) => {
   return (
     <Container $margintop={marginTop}>
-      <SecondaryTitle title='Add Article' underTitle='create your story' />
+      <SecondaryTitle
+        backgroundColor='teal'
+        title='Add Article'
+        underTitle='create your story'
+      />
       <AddArticle />
     </Container>
   );

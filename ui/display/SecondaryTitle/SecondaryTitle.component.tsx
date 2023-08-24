@@ -4,11 +4,16 @@ import { Container, Title, UnderTitle } from "./SecondaryTitle.style";
 interface Props {
   title: string;
   underTitle?: string;
+  backgroundColor?: "teal" | "none";
 }
 
-export const SecondaryTitle: FC<Props> = ({ title, underTitle }) => {
+export const SecondaryTitle: FC<Props> = ({
+  title,
+  underTitle,
+  backgroundColor = "none",
+}) => {
   return (
-    <Container>
+    <Container $backgroundcolor={backgroundColor}>
       <Title>{title}</Title>
       <UnderTitle>{underTitle}</UnderTitle>
     </Container>

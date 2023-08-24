@@ -8,6 +8,7 @@ export const Container = styled.button`
   background-color: rgba(255, 255, 255, 0);
   border: 0.05rem solid black;
   box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
+  padding: 1rem;
   &:hover {
     transition: 0.3s;
     box-shadow: 0 0 5px ${theme.colors.secondary};

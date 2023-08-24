@@ -12,7 +12,6 @@ export const DisplayArticles: FC = () => {
     console.log("Received token:", data.token);
   }
 
-  // Call this function somewhere in your component
   fetchToken();
   const { data, isError, isLoading } = useArticles({
     endpoint: "article-primary",
@@ -37,7 +36,7 @@ export const DisplayArticles: FC = () => {
           );
         })}
       </RenderArticles>
-      <AddButton link='/article-primary/add/e6f1fe8d-dca2-4d7b-a50d-1c3285f1e9ac' />
+      <AddButton link='/article-primary/create/e6f1fe8d-dca2-4d7b-a50d-1c3285f1e9ac' />
     </Container>
   );
 };

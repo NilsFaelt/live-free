@@ -1,11 +1,11 @@
 "use client";
 import { ArticlePrimaryAddView } from "@/features";
-import { NoMenuLayout } from "@/layout";
+import { MainLayout } from "@/layout";
 
 export default function Home({ params }: { params: { id: string } }) {
   return (
-    <NoMenuLayout>
+    <MainLayout>
       <ArticlePrimaryAddView marginTop='10rem' />
-    </NoMenuLayout>
+    </MainLayout>
   );
 }

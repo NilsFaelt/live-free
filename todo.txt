@@ -5,7 +5,7 @@ add footer
 readmore page
 login-page
 logged-in-page
-
+sort by category or user when diaplyed in detail article
 
 
 
