@@ -2,7 +2,7 @@ import React, { FC } from "react";
 import { Container } from "./HomePageView.style";
 import { BigImage, ProfileArticle, ArticlePrimary } from "@/components";
 import { SecondaryTitle } from "@/ui/display/SecondaryTitle/SecondaryTitle.component";
-import { ArticlePrimaryView } from "@/features";
+import { ArticlePrimaryView, IFrame } from "@/features";
 
 export const HomePageView: FC = () => {
   return (

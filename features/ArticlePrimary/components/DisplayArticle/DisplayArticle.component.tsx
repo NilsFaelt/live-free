@@ -8,7 +8,7 @@ import {
 } from "./DisplayArticle.style";
 import { useArticle } from "../../hooks";
 import { SecondaryTitle } from "@/ui/display/SecondaryTitle/SecondaryTitle.component";
-import { MainText, PrimaryButton } from "@/ui";
+import { MainText, PrimaryButton, ShareButton } from "@/ui";
 import { DisplayArticles } from "..";
 import { useDeleteArticleMutation } from "../../hooks/useDeleteArticleMutation";
 import { useRouter } from "next/navigation";
@@ -28,6 +28,7 @@ export const DisplayArticle: FC<Props> = ({ id }) => {
       />
     );
   const { title, createdAt, image } = data;
+
   const handleDeleteOnClick = () => {
     mutateAsync()
       .then(() => {
@@ -48,6 +49,7 @@ export const DisplayArticle: FC<Props> = ({ id }) => {
           Nils <br /> {createdAt}
         </EndText>
         <PrimaryButton onClick={handleDeleteOnClick} text='REMOVE ARTICLE' />
+        <ShareButton />
       </Container>
       <DisplayArticles />
     </>

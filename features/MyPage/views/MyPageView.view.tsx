@@ -3,6 +3,7 @@ import { Container } from "./MyPageView.style";
 import { ProfileArticle } from "@/components";
 import { useUser } from "@auth0/nextjs-auth0/client";
 import { DisplayArticles } from "@/features/ArticlePrimary/components";
+import { ShareButton } from "@/ui";
 
 export const MyPageView: FC = () => {
   const { user } = useUser();
