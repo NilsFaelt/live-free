@@ -1,14 +1,14 @@
-add article front-end
-add authgurad user
-create user
-add footer 
-readmore page
-login-page
-logged-in-page
-sort by category or user when diaplyed in detail article
+
+
+create user db
+user inly deletes own articles 
+display users 
+display relevant articles 
+secure keys
 
 
 
-Possible names 
-TaleTurf
-PubliSphere
+
+
+
+

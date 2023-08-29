@@ -9,7 +9,6 @@ import {
 export const ShareButton: FC = () => {
   const currentUrl = window.location.href;
   const shareOnFacebook = () => {
-    const url = encodeURIComponent("https://your-website-url.com");
     window.open(
       `https://www.facebook.com/sharer/sharer.php?u=${currentUrl}`,
       "_blank"
@@ -17,7 +16,6 @@ export const ShareButton: FC = () => {
   };
 
   const shareOnTwitter = () => {
-    const url = encodeURIComponent("https://your-website-url.com");
     const text = encodeURIComponent("Check out this awesome article!");
     window.open(
       `https://twitter.com/intent/tweet?url=${currentUrl}&text=${text}`,
@@ -26,7 +24,6 @@ export const ShareButton: FC = () => {
   };
 
   const shareOnLinkedIn = () => {
-    const url = encodeURIComponent("https://your-website-url.com");
     const title = encodeURIComponent("My Website");
     window.open(
       `https://www.linkedin.com/shareArticle?url=${currentUrl}&title=${title}`,

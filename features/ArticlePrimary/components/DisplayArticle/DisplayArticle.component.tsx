@@ -12,12 +12,14 @@ import { MainText, PrimaryButton, ShareButton } from "@/ui";
 import { DisplayArticles } from "..";
 import { useDeleteArticleMutation } from "../../hooks/useDeleteArticleMutation";
 import { useRouter } from "next/navigation";
+import { useFirebaseIdToken } from "@/hooks";
 interface Props {
   id: string;
 }
 
 export const DisplayArticle: FC<Props> = ({ id }) => {
-  const { mutateAsync } = useDeleteArticleMutation(id);
+  const token = useFirebaseIdToken();
+  const { mutateAsync } = useDeleteArticleMutation(id, token);
   const router = useRouter();
   const { data } = useArticle({ endpoint: "article-primary", id });
   if (!data)

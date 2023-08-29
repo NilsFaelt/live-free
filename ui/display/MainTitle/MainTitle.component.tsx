@@ -7,13 +7,15 @@ import {
   UnderTitle,
 } from "./MainTitle.style";
 import { Permanent_Marker } from "next/font/google";
-import { useUser } from "@auth0/nextjs-auth0/client";
+import { auth } from "@/firebase";
+
 const permanentMarker = Permanent_Marker({
   subsets: ["latin"],
   weight: ["400"],
 });
 export const MainTitle: FC = () => {
-  const { user } = useUser();
+  const user = auth.currentUser?.displayName;
+
   return (
     <StyledLink href={"/"}>
       <Container>
@@ -21,9 +23,9 @@ export const MainTitle: FC = () => {
         <UnderTitle className={permanentMarker.className}>
           Create your news
         </UnderTitle>
-        {user?.nickname && (
+        {user && (
           <LoggedInNameText className={permanentMarker.className}>
-            {user.nickname}
+            {user}
           </LoggedInNameText>
         )}
       </Container>

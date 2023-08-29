@@ -7,7 +7,7 @@ import {
   Title,
   TitleWrapper,
   UnderTitle,
-} from "./ProfileArticle.style";
+} from "./DisplayUser.style";
 import { Bebas_Neue, Rajdhani } from "next/font/google";
 import { PrimaryButton } from "@/ui/actions";
 
@@ -25,7 +25,7 @@ interface Props {
   url: string;
 }
 
-export const ProfileArticle: FC<Props> = ({
+export const DisplayUser: FC<Props> = ({
   title,
   imageSrc,
   text,

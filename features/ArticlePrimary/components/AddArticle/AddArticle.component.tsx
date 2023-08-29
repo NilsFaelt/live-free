@@ -12,8 +12,10 @@ import { ArticlePrimary } from "@/components";
 import { travelCategories } from "./travelCategories";
 import { useCreateArticleMutation } from "../../hooks";
 import { useRouter } from "next/navigation";
+import { useFirebaseIdToken } from "@/hooks";
 
 export const AddArticle: FC = () => {
+  const token = useFirebaseIdToken();
   const router = useRouter();
   const [article, setArticle] = useState<ArticlePrimaryBaseType>({
     title: "",
@@ -31,7 +33,8 @@ export const AddArticle: FC = () => {
       [fieldName]: value,
     });
   };
-  const { mutateAsync } = useCreateArticleMutation(article);
+
+  const { mutateAsync } = useCreateArticleMutation(article, token);
   const handleClick = async () => {
     mutateAsync().then(() => {
       router.push("/");

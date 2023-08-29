@@ -1,6 +1,6 @@
 import React, { FC } from "react";
 import { Container } from "./HomePageView.style";
-import { BigImage, ProfileArticle, ArticlePrimary } from "@/components";
+import { BigImage, DisplayUser, ArticlePrimary } from "@/components";
 import { SecondaryTitle } from "@/ui/display/SecondaryTitle/SecondaryTitle.component";
 import { ArticlePrimaryView, IFrame } from "@/features";
 
@@ -14,17 +14,6 @@ export const HomePageView: FC = () => {
         />
       </BigImage>
       <ArticlePrimaryView />
-      <ProfileArticle
-        url='https://www.youtube.com/watch?v=bbUGVFEO9Yc'
-        buttonText='SEE VIDEO'
-        title='Get Inspired'
-        underTitle='Wes Kremer'
-        imageSrc='/images/wes.png'
-        text='A truly inspirational way of living.
-        And not for likes an social media but for the true love of living.
-        Check it out at vice. 
-        '
-      />
     </Container>
   );
 };

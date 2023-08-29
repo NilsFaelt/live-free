@@ -10,8 +10,6 @@ export const Container = styled.footer`
   width: 100%;
   min-height: 5rem;
   padding-bottom: 3rem;
-  margin-top: 5rem;
-  background-color: grey;
   @media (max-width: ${mediaQueries.tablet}) {
   }
 `;
