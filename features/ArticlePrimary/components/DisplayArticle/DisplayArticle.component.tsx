@@ -29,8 +29,7 @@ export const DisplayArticle: FC<Props> = ({ id }) => {
         underTitle='We are really sorry for the inconvenience'
       />
     );
-  const { title, createdAt, image } = data;
-
+  const { createdAt, image } = data;
   const handleDeleteOnClick = () => {
     mutateAsync()
       .then(() => {
@@ -48,7 +47,7 @@ export const DisplayArticle: FC<Props> = ({ id }) => {
         <UnderTitle>{data.text}</UnderTitle>
         <MainText>{data.content}</MainText>
         <EndText>
-          Nils <br /> {createdAt}
+          {data.author?.userName} <br /> {createdAt}
         </EndText>
         <PrimaryButton onClick={handleDeleteOnClick} text='REMOVE ARTICLE' />
         <ShareButton />

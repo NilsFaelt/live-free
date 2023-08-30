@@ -23,7 +23,7 @@ export const AddArticle: FC = () => {
     content: "",
     category: "allaround",
     image: "",
-    authorId: "78667ab1-f44b-4d19-b01b-ca22f4e40d66",
+    authorId: "l3LciZ5rpteN8drgedL0caT8RPi1",
   });
   const { title, text, image, category } = article;
 

@@ -24,17 +24,7 @@ export const MyPageView: FC = () => {
   const { photoURL, displayName } = user;
   return (
     <Container>
-      <DisplayUser
-        url=''
-        title={displayName ? displayName : ""}
-        underTitle={"My Mag"}
-        imageSrc={
-          photoURL
-            ? photoURL
-            : "https://images.unsplash.com/photo-1510442650500-93217e634e4c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=691&q=80"
-        }
-        text='Im nils and im a freelnace writer whom truly love to write and spread inspiration'
-      />
+      <DisplayUser id='1' />
 
       <DisplayArticles />
     </Container>

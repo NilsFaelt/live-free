@@ -1,8 +1,14 @@
 import React, { FC } from "react";
 import { Container } from "./HomePageView.style";
-import { BigImage, DisplayUser, ArticlePrimary } from "@/components";
+import {
+  BigImage,
+  DisplayUser,
+  ArticlePrimary,
+  RenderArticles,
+} from "@/components";
 import { SecondaryTitle } from "@/ui/display/SecondaryTitle/SecondaryTitle.component";
-import { ArticlePrimaryView, IFrame } from "@/features";
+import { ArticlePrimaryView } from "@/features";
+import { useUsers } from "@/hooks";
 
 export const HomePageView: FC = () => {
   return (

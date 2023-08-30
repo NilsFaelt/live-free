@@ -1,5 +1,5 @@
 "use client";
-import { FC } from "react";
+import { FC, useState } from "react";
 import { Bebas_Neue, Rajdhani } from "next/font/google";
 import {
   Text,
@@ -39,6 +39,7 @@ export const ArticlePrimary: FC<Props> = ({
   const truncateTitle = (title: string, length: number): string => {
     return title?.length > length ? title?.substr(0, length) + "..." : title;
   };
+
   return (
     <StyledLink href={link ? link : ""}>
       <Container>

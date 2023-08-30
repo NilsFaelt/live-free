@@ -1,10 +1,10 @@
 import { apiClient } from "@/api";
-import { UserBaseType } from "@/types";
+import { UserType } from "@/types";
 import { QueryClient, useMutation } from "@tanstack/react-query";
 
 const queryClient = new QueryClient();
 
-const mutateUser = async (data: UserBaseType, token: string | null) => {
+const mutateUser = async (data: UserType, token: string | null) => {
   const response = await fetch(`${apiClient}/user`, {
     method: "POST",
     headers: {
@@ -16,10 +16,7 @@ const mutateUser = async (data: UserBaseType, token: string | null) => {
   return response;
 };
 
-export const useCreateUserMutation = (
-  data: UserBaseType,
-  token: string | null
-) => {
+export const useCreateUserMutation = (data: UserType, token: string | null) => {
   return useMutation(() => mutateUser(data, token), {
     onSuccess: (data) => {
       queryClient.invalidateQueries(["user"], data.uid);
