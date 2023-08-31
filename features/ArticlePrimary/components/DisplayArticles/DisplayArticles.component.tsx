@@ -1,15 +1,15 @@
-import React, { FC } from "react";
+import React, { FC, useContext } from "react";
 import { Container } from "./DisplayArticles.style";
 import { ArticlePrimary, RenderArticles } from "@/components";
 import { useArticles } from "../../hooks";
 import { AddButton } from "@/ui/actions";
 import { SecondaryTitle } from "@/ui/display/SecondaryTitle/SecondaryTitle.component";
 
-export const DisplayArticles: FC = () => {
+export const DisplayArticles: FC<{ userId?: string }> = ({ userId }) => {
   const { data, isError, isLoading } = useArticles({
     endpoint: "article-primary",
   });
-  console.log(data);
+
   if (!data && isError) return null;
   return (
     <Container>
@@ -30,7 +30,10 @@ export const DisplayArticles: FC = () => {
           );
         })}
       </RenderArticles>
-      <AddButton link='/article-primary/create/e6f1fe8d-dca2-4d7b-a50d-1c3285f1e9ac' />
+      <AddButton
+        userId={userId}
+        link='/article-primary/create/e6f1fe8d-dca2-4d7b-a50d-1c3285f1e9ac'
+      />
     </Container>
   );
 };

@@ -12,7 +12,7 @@ import { MainText, PrimaryButton, ShareButton } from "@/ui";
 import { DisplayArticles } from "..";
 import { useDeleteArticleMutation } from "../../hooks/useDeleteArticleMutation";
 import { useRouter } from "next/navigation";
-import { useFirebaseIdToken } from "@/hooks";
+import { useFirebaseIdToken, useImUser } from "@/hooks";
 interface Props {
   id: string;
 }
@@ -22,6 +22,8 @@ export const DisplayArticle: FC<Props> = ({ id }) => {
   const { mutateAsync } = useDeleteArticleMutation(id, token);
   const router = useRouter();
   const { data } = useArticle({ endpoint: "article-primary", id });
+
+  const imUser = useImUser(data?.author.id);
   if (!data)
     return (
       <SecondaryTitle
@@ -49,7 +51,9 @@ export const DisplayArticle: FC<Props> = ({ id }) => {
         <EndText>
           {data.author?.userName} <br /> {createdAt}
         </EndText>
-        <PrimaryButton onClick={handleDeleteOnClick} text='REMOVE ARTICLE' />
+        {imUser && (
+          <PrimaryButton onClick={handleDeleteOnClick} text='REMOVE ARTICLE' />
+        )}
         <ShareButton />
       </Container>
       <DisplayArticles />

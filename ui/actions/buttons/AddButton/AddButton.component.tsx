@@ -7,13 +7,17 @@ import {
   Title,
 } from "./AddButton.style";
 import Link from "next/link";
+import { useImUser } from "@/hooks";
 
 interface Props {
+  userId: string | null | undefined;
   link: string;
   title?: string;
 }
 
-export const AddButton: FC<Props> = ({ title, link = "/" }) => {
+export const AddButton: FC<Props> = ({ title, link = "/", userId }) => {
+  const imUser = useImUser(userId);
+  if (!imUser) return null;
   return (
     <ButtonWrapper>
       {title && <Title>{title}</Title>}

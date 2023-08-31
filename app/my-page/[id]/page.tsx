@@ -3,7 +3,6 @@ import { MyPageView } from "@/features/MyPage";
 import { MainLayout } from "@/layout";
 
 export default function MyPage({ params }: { params: { id: string } }) {
-  console.log(params);
   if (!params.id) return null;
   return (
     <MainLayout>
