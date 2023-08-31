@@ -8,7 +8,7 @@ import { useQuery } from "@tanstack/react-query";
 
 const fetchUser = async (args: {
   endpoint: string;
-  id: string;
+  id: string | null;
 }): Promise<UserType> => {
   console.log(args);
   const data = await apiClient(`${args.endpoint}/${args.id}`, {
@@ -17,6 +17,6 @@ const fetchUser = async (args: {
   return data;
 };
 
-export const useUser = (args: { endpoint: string; id: string }) => {
+export const useUser = (args: { endpoint: string; id: string | null }) => {
   return useQuery(["user"], () => fetchUser(args));
 };

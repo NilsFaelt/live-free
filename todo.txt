@@ -1,12 +1,16 @@
 
 
-create user db
 user inly deletes own articles 
 display users 
 display relevant articles 
 secure keys
-xss sql injection guard
-
+update text my profile 
+Display useers
+Divide user ?
+Loggedin context
+chechk user id when adding or deleteing
+only show remove and add on its own profile
+hook for authstate?
 
 
 

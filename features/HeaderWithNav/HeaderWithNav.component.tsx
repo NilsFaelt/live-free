@@ -22,7 +22,6 @@ export const HeaderWithNav: FC<Props> = () => {
     { text: "Home", href: "/" },
     { text: "About", href: "/about" },
     { text: "Contact", href: "/contact" },
-    { text: "Profile", href: "/my-page/1" },
   ];
   return (
     <Container>

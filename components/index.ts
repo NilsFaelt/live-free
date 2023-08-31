@@ -1,5 +1,5 @@
 export * from "./BigImage";
-export * from "./DisplayUser";
+export * from "./User/DisplayUser";
 export * from "./ArticlePrimary";
 export * from "./RenderArticles";
 export * from "./Footer";
