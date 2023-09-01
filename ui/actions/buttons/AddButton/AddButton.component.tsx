@@ -10,7 +10,7 @@ import Link from "next/link";
 import { useImUser } from "@/hooks";
 
 interface Props {
-  userId: string | null | undefined;
+  userId?: string | null;
   link: string;
   title?: string;
 }
@@ -21,7 +21,7 @@ export const AddButton: FC<Props> = ({ title, link = "/", userId }) => {
   return (
     <ButtonWrapper>
       {title && <Title>{title}</Title>}
-      <StyledLink href={link}>
+      <StyledLink href={`${link}/${userId}`}>
         <Container>
           <Text>+</Text>
         </Container>

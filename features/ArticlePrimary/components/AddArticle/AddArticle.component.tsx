@@ -14,7 +14,8 @@ import { useCreateArticleMutation } from "../../hooks";
 import { useRouter } from "next/navigation";
 import { useFirebaseIdToken } from "@/hooks";
 
-export const AddArticle: FC = () => {
+export const AddArticle: FC<{ userId: string }> = ({ userId }) => {
+  console.log(userId);
   const token = useFirebaseIdToken();
   const router = useRouter();
   const [article, setArticle] = useState<ArticlePrimaryBaseType>({
@@ -23,7 +24,7 @@ export const AddArticle: FC = () => {
     content: "",
     category: "allaround",
     image: "",
-    authorId: "l3LciZ5rpteN8drgedL0caT8RPi1",
+    authorId: userId,
   });
   const { title, text, image, category } = article;
 

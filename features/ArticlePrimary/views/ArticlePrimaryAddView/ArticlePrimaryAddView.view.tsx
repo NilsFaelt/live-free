@@ -4,12 +4,12 @@ import { SecondaryTitle } from "@/ui/display/SecondaryTitle/SecondaryTitle.compo
 import { AddArticle } from "../../components";
 
 interface Props {
-  id?: string;
+  userId: string;
   marginTop?: "0rem" | "10rem" | "15rem";
 }
 
 export const ArticlePrimaryAddView: FC<Props> = ({
-  id,
+  userId,
   marginTop = "0rem",
 }) => {
   return (
@@ -19,7 +19,7 @@ export const ArticlePrimaryAddView: FC<Props> = ({
         title='Add Article'
         underTitle='create your story'
       />
-      <AddArticle />
+      <AddArticle userId={userId} />
     </Container>
   );
 };

@@ -30,10 +30,7 @@ export const DisplayArticles: FC<{ userId?: string }> = ({ userId }) => {
           );
         })}
       </RenderArticles>
-      <AddButton
-        userId={userId}
-        link='/article-primary/create/e6f1fe8d-dca2-4d7b-a50d-1c3285f1e9ac'
-      />
+      <AddButton userId={userId} link='/article-primary/create' />
     </Container>
   );
 };

@@ -35,9 +35,27 @@ export const ShareButton: FC = () => {
     <Container>
       <Title>Share on social media</Title>
       <LogoContainer>
-        <StyledLogo onClick={shareOnLinkedIn} src='/svg/linkedin.svg' />
-        <StyledLogo onClick={shareOnFacebook} src='/svg/facebook.svg' />
-        <StyledLogo onClick={shareOnTwitter} src='/svg/twitter.svg' />
+        <StyledLogo
+          width={25}
+          height={25}
+          alt='facebook logo'
+          onClick={shareOnFacebook}
+          src='/svg/facebook.svg'
+        />
+        <StyledLogo
+          width={25}
+          height={25}
+          alt='linkedin logo'
+          onClick={shareOnLinkedIn}
+          src='/svg/linkedin.svg'
+        />
+        <StyledLogo
+          width={25}
+          height={25}
+          alt='twitter logo'
+          onClick={shareOnTwitter}
+          src='/svg/twitter.svg'
+        />
       </LogoContainer>
     </Container>
   );

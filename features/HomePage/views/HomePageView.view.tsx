@@ -7,7 +7,7 @@ import { ArticlePrimaryView } from "@/features";
 export const HomePageView: FC = () => {
   return (
     <Container>
-      <BigImage imageSrc='https://images.unsplash.com/photo-1586996292898-71f4036c4e07?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80'>
+      <BigImage imageSrc='/images/bg-image.webp'>
         <SecondaryTitle
           title='Live laugh and play'
           underTitle='Dont take life to seriously'

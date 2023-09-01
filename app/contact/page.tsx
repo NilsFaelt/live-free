@@ -1,5 +1,4 @@
 "use client";
-
 import { MainLayout } from "@/layout";
 
 export default function Contact() {

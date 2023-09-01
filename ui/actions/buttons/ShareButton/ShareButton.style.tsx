@@ -11,7 +11,7 @@ export const LogoContainer = styled.div`
   flex-direction: row;
   gap: 2rem;
 `;
-export const Title = styled.h5`
+export const Title = styled.p`
   color: ${theme.colors.primary};
 `;
 export const StyledLogo = styled.img`
